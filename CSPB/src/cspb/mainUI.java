@@ -39,6 +39,8 @@ import java.util.logging.Logger;
  */
 public class mainUI extends javax.swing.JFrame {
 
+    private File workingDirectory;
+    
     /**
      * Creates new form mainUI
      */
@@ -201,9 +203,12 @@ public class mainUI extends javax.swing.JFrame {
      * @param evt unused
      */
     private void selectFolderBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selectFolderBtnMouseClicked
-        File workingDirectory;
+        if (workingDirectory == null)
+        {
+            workingDirectory = new File(".");
+        }
         JFileChooser selectFolderUI = new JFileChooser();
-        selectFolderUI.setCurrentDirectory(new File("."));
+        selectFolderUI.setCurrentDirectory(workingDirectory);
         selectFolderUI.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int response = selectFolderUI.showOpenDialog(mainUI.this);
         if (response == JFileChooser.APPROVE_OPTION)

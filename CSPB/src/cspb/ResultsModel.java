@@ -42,7 +42,7 @@ public class ResultsModel extends AbstractTableModel {
         ColNames = new String[3];
         ColNames[0] = "File Checked";
         ColNames[1] = "File Compared";
-        ColNames[2] = "% Plagiarized";
+        ColNames[2] = "Plagiarism Score [0 - 10]";
     }
     
     @Override

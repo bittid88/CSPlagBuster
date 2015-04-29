@@ -82,7 +82,7 @@ public class worker extends javax.swing.SwingWorker<Integer, Integer>{
                     // Update Model
                     if( plagChance > CSPB.FILTER_LEVEL )
                     {
-                        rm.addRow(f.fileName, g.fileName, plagChance, 0);
+                        rm.addRow(f.fileName, g.fileName, plagChance/10, 0);
                         CSPB.results.setEditingRow( CSPB.results.getEditingRow() +1 );
                     }
                     // Update progress bar

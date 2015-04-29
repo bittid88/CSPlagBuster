@@ -46,11 +46,11 @@ public class CSPB {
     public static Random RANDOM = new Random();
     
     // Configurable accuracy-related constants
-    public static final Integer THRESHOLD = 1000;     // Threshold score for alignment
-    public static final Integer INDEL = -20;          // Score for insertion/deletion
-    public static final Integer MISMATCH = -20;      // Score for mismatched character
-    public static final Integer MATCH = 50;          // Score for matched character
-    public static final Integer SHRED_SIZE = 25;    // Shred length (in characters)
+    public static final Integer THRESHOLD = 60;     // Threshold score for alignment
+    public static final Integer INDEL = -10;          // Score for insertion/deletion
+    public static final Integer MISMATCH = -2;      // Score for mismatched character
+    public static final Integer MATCH = 3;          // Score for matched character
+    public static final Integer SHRED_SIZE = 30;    // Shred length (in characters)
     public static final Integer FILTER_LEVEL = -1;   // Results under this level of 
                                                      // plagiarism % will not be displayed.
                                                      // [0-100]
